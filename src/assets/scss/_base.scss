@@ -1,0 +1,7 @@
+progress[value]::-webkit-progress-value {
+  background: $secondary;
+}
+
+progress[value]::-webkit-progress-bar {
+  background: $primary;
+}

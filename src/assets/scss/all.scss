@@ -1,0 +1,520 @@
+@import "~bootstrap/scss/functions";
+@import "./variable";
+@import "~bootstrap/scss/bootstrap";
+@import "./base";
+@import "./breakpoint";
+@import "./utilities";
+
+.content {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  overflow: hidden;
+  background-color: $dark;
+  display: flex;
+  flex-wrap: wrap;
+}
+.logo {
+  background-image: url(https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/logo.svg); /* shows image */
+  width: 120px;
+  height: 40px;
+  margin: auto;
+  /* Hide the text. */
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.sidebar {
+  padding: 40px 30px 0;
+  height: 100vh;
+  width: 280px;
+  background-color: $primary;
+  position: relative;
+  @include breakpoint-sm {
+    display: none;
+    height: calc(100vh - 60px);
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 60px;
+    z-index: 999;
+  }
+  &-btnGroup {
+    margin-top: 40px;
+    position: relative;
+    &-item {
+      display: block;
+      width: 220px;
+      font-size: 16px;
+      line-height: 24px;
+      font-family: Noto Sans TC;
+      letter-spacing: 1.6px;
+      color: $light;
+      position: relative;
+      margin-left: 76px;
+      margin-bottom: 24px;
+      &:hover {
+        color: #fff;
+        text-decoration: underline;
+        opacity: 0.7;
+        cursor: pointer;
+      }
+      & > img {
+        position: absolute;
+        left: -36px;
+      }
+      &-active {
+        background-color: $secondary;
+        border-radius: 50px;
+        color: $dark;
+        height: 52px;
+        line-height: 52px;
+        text-align: center;
+        margin: 0 auto 40px;
+        &:hover {
+          color: #000;
+          opacity: 1;
+          background-color: darken($color: $secondary, $amount: 3%);
+        }
+        & > img {
+          position: absolute;
+          top: 14px;
+          left: 35px;
+        }
+      }
+    }
+  }
+}
+
+.monster {
+  &-bgImg {
+    width: 720px;
+    position: absolute;
+    bottom: -150px;
+    left: -350px;
+    transform: rotate(20deg);
+    z-index: 1;
+
+    &-active {
+      animation-duration: 0.5s;
+      animation-name: slidein;
+      animation-fill-mode: forwards;
+    }
+  }
+  &-pop {
+    width: 330px;
+    height: 161px;
+    background: #ffffff;
+    border-radius: 16px;
+    position: absolute;
+    left: 163px;
+    bottom: 193px;
+    text-align: center;
+    z-index: 1;
+    @include breakpoint-sm {
+      width: 300px;
+      left: calc(100vw - 320px);
+    }
+    &-title {
+      font-family: Noto Sans TC;
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: 0px;
+      color: $primary;
+      margin-top: 20px;
+    }
+    &-desc {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &-arrow {
+      transform: rotate(-225deg);
+      position: absolute;
+      left: -10px;
+      bottom: 15px;
+      width: 70px;
+      border: 5px solid #fff;
+      border-radius: 50%;
+      z-index: -1;
+      @include breakpoint-sm {
+        left: 30px;
+      }
+    }
+  }
+}
+.progress {
+  border-radius: 10px;
+  width: 266px;
+  height: 8px;
+  border: 2px solid $dark;
+  &-box {
+    padding: 20px 32px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 4px;
+  }
+  &-bar {
+    width: 100%;
+  }
+}
+.modal-content {
+  width: 480px;
+  height: 224px;
+  text-align: center;
+  padding: 24px;
+  @include breakpoint-sm {
+    width: 100%;
+  }
+  &-title {
+    color: $primary;
+    font-family: Noto Sans TC;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 16px;
+  }
+  &-input {
+    width: 400px;
+    background: $light;
+    font-family: Noto Sans TC;
+    border: 0;
+    border-radius: 7px;
+    margin: 0 auto;
+    padding: 14px 16px;
+    @include breakpoint-sm {
+      width: 100%;
+    }
+  }
+  &-btnGroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    @include breakpoint-sm {
+      justify-content: space-between;
+    }
+  }
+  &-btn {
+    width: 120px;
+    line-height: 40px;
+    border-radius: 7px;
+    border: 1px solid #6b6d72;
+    font-family: Noto Sans TC Regular;
+    font-size: 16px;
+    padding: 0;
+    margin: 24px 0 32px;
+    cursor: pointer;
+    &-secondary {
+      background-color: $secondary;
+      color: $primary;
+      border: 0;
+      margin-left: 8px;
+      margin-right: 15px;
+      @include breakpoint-sm {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.main {
+  padding: 30px;
+  background-color: $dark;
+  height: 100vh;
+  overflow-y: auto;
+  @include breakpoint-sm {
+    padding-top: 0px;
+    height: calc(100vh - 60px);
+  }
+}
+.header-mobile {
+  position: sticky;
+  top: 0;
+  flex-wrap: wrap;
+  height: 60px;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  overflow: hidden;
+  display: none;
+  background-color: $primary;
+  @include breakpoint-sm {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-btn {
+    width: 50px;
+    & > img {
+      position: absolute;
+      left: 20px;
+      top: 15px;
+      width: 25px;
+      height: 30px;
+      opacity: 0.5;
+    }
+  }
+  &-title {
+    color: rgba($color: $light, $alpha: 0.5);
+    font-family: Noto Sans TC Regular;
+    font-size: 20px;
+    line-height: 29px;
+    cursor: pointer;
+    &:hover {
+      color: #fff;
+    }
+    &-arrow {
+      border-left: 8px solid $light;
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      opacity: 0.5;
+      width: 0;
+      height: 0;
+      margin: 0 10px;
+    }
+
+    &-folderName {
+      font-family: Noto Sans TC Regular;
+      font-size: 16px;
+      line-height: 24px;
+      color: $light;
+      opacity: 1;
+      &:hover {
+        color: #ffd46e;
+        text-decoration: solid;
+      }
+    }
+  }
+  &-search {
+    &-icon {
+      width: 50px;
+      height: 50px;
+      box-sizing: border-box;
+      border-radius: 25px;
+      background-image: url(https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/icon-search.svg);
+      background-position: 5px;
+      background-repeat: no-repeat;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &-input {
+      position: absolute;
+      top: 0;
+      right: 50px;
+      width: calc(100% - 110px);
+      height: 42.5px;
+      line-height: 30px;
+      outline: 0;
+      border: 0;
+      font-size: 1em;
+      border-radius: 20px;
+      padding: 0 20px;
+      margin: 8px 0;
+      display: none;
+    }
+    &-close {
+      position: absolute;
+      right: 60px;
+      display: none;
+      top: 14px;
+    }
+  }
+}
+.navbar {
+  margin: 10px 0;
+  padding: 0;
+  @include breakpoint-sm {
+    display: none;
+  }
+  &-title {
+    color: rgba($color: $light, $alpha: 0.5);
+    font-family: Noto Sans TC Regular;
+    font-size: 20px;
+    line-height: 29px;
+    cursor: pointer;
+    &:hover {
+      color: #fff;
+    }
+    @include breakpoint-sm {
+      display: none;
+    }
+    &-arrow {
+      border-left: 8px solid $light;
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      opacity: 0.5;
+      width: 0;
+      height: 0;
+      margin: 0 10px;
+      @include breakpoint-sm {
+        margin-bottom: 10px;
+      }
+    }
+    &-folderName {
+      font-family: Noto Sans TC Regular;
+      font-size: 16px;
+      line-height: 24px;
+      color: $light;
+      opacity: 1;
+      &:hover {
+        color: #ffd46e;
+        text-decoration: solid;
+      }
+      @include breakpoint-sm {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &-search {
+    &-input {
+      width: 400px;
+      padding: 14px;
+      padding-left: 52px;
+      background: $primary;
+      border-radius: 7px;
+      border: 0;
+      font-family: Noto Sans TC Regular;
+      font-size: 16px;
+      line-height: 24px;
+      color: #6b6d72;
+      background-image: url(https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/icon-search.svg);
+      background-position: 12px 10px;
+      background-repeat: no-repeat;
+      @include breakpoint-sm {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@keyframes slidein {
+  to {
+    left: -264px;
+    transform: unset;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.title {
+  font-family: Noto Sans TC Regular;
+  font-size: 16px;
+  line-height: 24px;
+  color: $light;
+  margin-top: 30px;
+}
+
+.folder {
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Noto Sans TC Regular;
+  color: #f3f2ef;
+  background-color: $primary;
+  border-radius: 7px;
+  padding: 16px;
+  padding-top: 64px;
+  &:hover {
+    cursor: pointer;
+    padding: 16px;
+    & > .folder-btnGroup {
+      display: flex;
+    }
+  }
+  &-btnGroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    display: none;
+  }
+  &-btn {
+    border-radius: 3px;
+    border: 1px solid #6b6d72;
+    background-color: #43454a;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba($color: #43454a, $alpha: 0.5);
+    }
+    & > img {
+      vertical-align: -webkit-baseline-middle;
+      width: 16px;
+    }
+  }
+}
+
+.file {
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Noto Sans TC Regular;
+  color: #f3f2ef;
+  background-color: $primary;
+  border-radius: 7px;
+  position: relative;
+  padding-bottom: 16px;
+  &:hover {
+    cursor: pointer;
+    & > .file-btnGroup {
+      display: flex;
+      padding: 0 16px;
+    }
+  }
+  &-img {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 16px;
+    border-radius: 7px 7px 0 0;
+  }
+  &-btnGroup {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: none;
+    margin-top: 16px;
+  }
+  &-btn {
+    border-radius: 3px;
+    border: 1px solid #6b6d72;
+    background-color: #43454a;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba($color: #43454a, $alpha: 0.5);
+    }
+    & > img {
+      vertical-align: -webkit-baseline-middle;
+      width: 16px;
+    }
+  }
+}
+
+.dropdown {
+  &-menu {
+    border-radius: 3px;
+    padding: 8px 0;
+    width: 160px;
+  }
+  &-item {
+    padding: 8px 16px;
+    color: $primary;
+    font-family: Noto Sans TC Regular;
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: 1px solid rgba($color: #2f3136, $alpha: 0.1);
+  }
+}
