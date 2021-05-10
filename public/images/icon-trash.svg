@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="icon-trash" transform="translate(-44 -387)">
+    <g id="Group_82" data-name="Group 82" transform="translate(0 180)">
+      <rect id="Rectangle_21" data-name="Rectangle 21" width="24" height="24" transform="translate(44 207)" fill="rgba(255,255,255,0)"/>
+      <g id="Group_86" data-name="Group 86" transform="translate(42.649 205.202)">
+        <line id="Line_4" data-name="Line 4" x2="20" transform="translate(3.351 6.746)" fill="none" stroke="#f3f2ef" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <path id="Path_5" data-name="Path 5" d="M15.29,2.8H10.1L7.553,6.746H17.836Z" transform="translate(0.656 0)" fill="none" stroke="#f3f2ef" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <path id="Path_6" data-name="Path 6" d="M13.069,6.213H5.16L6.451,23.7H19.686L20.978,6.213Z" transform="translate(0.283 0.533)" fill="none" stroke="#f3f2ef" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <path id="Path_7" data-name="Path 7" d="M-1,11" transform="translate(59 215)" fill="none" stroke="#f3f2ef" stroke-linecap="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

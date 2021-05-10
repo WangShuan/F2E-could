@@ -32,10 +32,10 @@
           <div class="folder">
             <div class="folder-btnGroup">
               <div class="folder-btn" @click.prevent="clickRecoverFolder(item)">
-                <img src="../assets/images/return.svg" alt="" />
+                <img src="/images/return.svg" alt="" />
               </div>
               <div class="folder-btn" @click.prevent="confirmDelFolder(item)">
-                <img src="../assets/images/icon-trash.svg" alt="" />
+                <img src="/images/icon-trash.svg" alt="" />
               </div>
             </div>
             {{ item.fakeName }}
@@ -53,10 +53,10 @@
           <div class="folder">
             <div class="folder-btnGroup">
               <div class="folder-btn" @click.prevent="clickRecoverFolder(item)">
-                <img src="../assets/images/return.svg" alt="" />
+                <img src="/images/return.svg" alt="" />
               </div>
               <div class="folder-btn" @click.prevent="confirmDelFolder(item)">
-                <img src="../assets/images/icon-trash.svg" alt="" />
+                <img src="/images/icon-trash.svg" alt="" />
               </div>
             </div>
             {{ item.fakeName }}
@@ -75,10 +75,10 @@
           <div class="file">
             <div class="file-btnGroup">
               <div class="file-btn" @click.prevent="clickRecover(item)">
-                <img src="../assets/images/return.svg" alt="" />
+                <img src="/images/return.svg" alt="" />
               </div>
               <div class="file-btn" @click.prevent="clickDelete(item)">
-                <img src="../assets/images/icon-trash.svg" alt="" />
+                <img src="/images/icon-trash.svg" alt="" />
               </div>
             </div>
             <img :src="item.imgUrl" class="file-img" alt="" />
@@ -97,10 +97,10 @@
           <div class="file">
             <div class="file-btnGroup">
               <div class="file-btn" @click.prevent="clickRecover(item)">
-                <img src="../assets/images/return.svg" alt="" />
+                <img src="/images/return.svg" alt="" />
               </div>
               <div class="file-btn" @click.prevent="clickDelete(item)">
-                <img src="../assets/images/icon-trash.svg" alt="" />
+                <img src="/images/icon-trash.svg" alt="" />
               </div>
             </div>
             <img :src="item.imgUrl" class="file-img" alt="" />

@@ -2,7 +2,7 @@
   <div class="content row">
     <div class="header-mobile">
       <div class="header-mobile-btn" @click.stop="toggleSidebar()">
-        <img src="../assets/images/menu.svg" alt="" />
+        <img src="/images/menu.svg" alt="" />
       </div>
       <div class="header-mobile-title" @click.stop="leaveFolder()">
         我的雲端硬碟
@@ -40,10 +40,7 @@
           class="sidebar-btnGroup-item sidebar-btnGroup-item-active"
           onclick="uploadFile.click()"
         >
-          <img
-            src="https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/icon-file-upload.svg"
-            alt=""
-          />
+          <img src="/images/icon-file-upload.svg" alt="" />
           上傳檔案
         </div>
         <input
@@ -54,10 +51,7 @@
           @click="clickUpload()"
         />
         <div class="sidebar-btnGroup-item" onclick="uploadFolder.click()">
-          <img
-            src="https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/icon-folder-upload.svg"
-            alt=""
-          />
+          <img src="/images/icon-folder-upload.svg" alt="" />
           上傳資料夾
         </div>
         <input
@@ -72,10 +66,7 @@
           data-toggle="modal"
           data-target="#addFolder-modal"
         >
-          <img
-            src="https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/icon-folder-add.svg"
-            alt=""
-          />
+          <img src="/images/icon-folder-add.svg" alt="" />
           新資料夾
         </div>
         <div
@@ -110,10 +101,7 @@
           </div>
         </div>
         <a href="#" class="sidebar-btnGroup-item">
-          <img
-            src="https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/icon-folder-share.svg"
-            alt=""
-          />
+          <img src="/images/icon-folder-share.svg" alt="" />
           共享資料夾
         </a>
         <router-link
@@ -121,23 +109,17 @@
           class="sidebar-btnGroup-item"
           @click.stop="isShowStar = true"
         >
-          <img
-            src="https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/icon-star.svg"
-            alt=""
-          />
+          <img src="/images/icon-star.svg" alt="" />
           已標記星號
         </router-link>
         <router-link to="/trash" class="sidebar-btnGroup-item">
-          <img
-            src="https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/icon-trash.svg"
-            alt=""
-          />
+          <img src="/images/icon-trash.svg" alt="" />
           垃圾桶
         </router-link>
       </div>
       <div class="monster">
         <img
-          src="https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/Cloud-monster.svg"
+          src="/images/Cloud-monster.svg"
           alt=""
           class="monster-bgImg"
           :class="{ 'monster-bgImg-active': isUploading || showStorage }"
@@ -251,14 +233,10 @@
                   <div class="folder-btn" @click.stop="toggleStarFolder(item)">
                     <img
                       v-if="item.isStar"
-                      src="https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/icon-star-fill.svg"
+                      src="/images/icon-star-fill.svg"
                       alt="標記星號"
                     />
-                    <img
-                      v-else
-                      src="https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/icon-star.svg"
-                      alt="標記星號"
-                    />
+                    <img v-else src="/images/icon-star.svg" alt="標記星號" />
                   </div>
                   <div class="dropdown">
                     <div
@@ -269,10 +247,7 @@
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <img
-                        src="https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/icon-more.svg"
-                        alt="選單"
-                      />
+                      <img src="/images/icon-more.svg" alt="選單" />
                     </div>
                     <div
                       class="dropdown-menu"
@@ -318,14 +293,10 @@
                   <div class="folder-btn" @click.stop="toggleStarFolder(item)">
                     <img
                       v-if="item.isStar"
-                      src="https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/icon-star-fill.svg"
+                      src="/images/icon-star-fill.svg"
                       alt="標記星號"
                     />
-                    <img
-                      v-else
-                      src="https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/icon-star.svg"
-                      alt="標記星號"
-                    />
+                    <img v-else src="/images/icon-star.svg" alt="標記星號" />
                   </div>
                   <div class="dropdown">
                     <div
@@ -336,10 +307,7 @@
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <img
-                        src="https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/icon-more.svg"
-                        alt="選單"
-                      />
+                      <img src="/images/icon-more.svg" alt="選單" />
                     </div>
                     <div
                       class="dropdown-menu"
@@ -386,14 +354,10 @@
                   <div class="file-btn" @click.stop="toggleStarFile(item)">
                     <img
                       v-if="item.isStar"
-                      src="https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/icon-star-fill.svg"
+                      src="/images/icon-star-fill.svg"
                       alt="標記星號"
                     />
-                    <img
-                      v-else
-                      src="https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/icon-star.svg"
-                      alt="標記星號"
-                    />
+                    <img v-else src="/images/icon-star.svg" alt="標記星號" />
                   </div>
                   <div class="dropdown">
                     <div
@@ -404,10 +368,7 @@
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <img
-                        src="https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/icon-more.svg"
-                        alt="選單"
-                      />
+                      <img src="/images/icon-more.svg" alt="選單" />
                     </div>
                     <div
                       class="dropdown-menu"
@@ -456,14 +417,10 @@
                   <div class="file-btn" @click.stop="toggleStarFile(item)">
                     <img
                       v-if="item.isStar"
-                      src="https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/icon-star-fill.svg"
+                      src="/images/icon-star-fill.svg"
                       alt="標記星號"
                     />
-                    <img
-                      v-else
-                      src="https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/icon-star.svg"
-                      alt="標記星號"
-                    />
+                    <img v-else src="/images/icon-star.svg" alt="標記星號" />
                   </div>
                   <div class="dropdown">
                     <div
@@ -474,10 +431,7 @@
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <img
-                        src="https://raw.githubusercontent.com/WangShuan/F2E-could/7e851ebb89cbe053223420b533bd55097a79a31b/images/icon-more.svg"
-                        alt="選單"
-                      />
+                      <img src="/images/icon-more.svg" alt="選單" />
                     </div>
                     <div
                       class="dropdown-menu"
