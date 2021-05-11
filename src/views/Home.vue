@@ -2,7 +2,7 @@
   <div class="content row">
     <div class="header-mobile">
       <div class="header-mobile-btn" @click.stop="toggleSidebar()">
-        <img src="/images/menu.svg" alt="" />
+        <img :src="require(`../assets/images/menu.svg`)" alt="" />
       </div>
       <div class="header-mobile-title" @click.stop="leaveFolder()">
         我的雲端硬碟
@@ -11,6 +11,10 @@
       <div
         class="header-mobile-search-icon"
         @click.prevent="toggleSearch()"
+        :style="{
+          'background-image':
+            `url(` + require(`../assets/images/icon-search.svg`) + `)`,
+        }"
       ></div>
       <input
         type="text"
@@ -34,13 +38,23 @@
       >
         <span aria-hidden="true">&times;</span>
       </button>
-      <router-link to="/"><h1 class="logo">could</h1></router-link>
+      <router-link to="/"
+        ><h1
+          class="logo"
+          :style="{
+            'background-image':
+              `url(` + require(`../assets/images/logo.svg`) + `)`,
+          }"
+        >
+          could
+        </h1></router-link
+      >
       <div class="sidebar-btnGroup">
         <div
           class="sidebar-btnGroup-item sidebar-btnGroup-item-active"
           onclick="uploadFile.click()"
         >
-          <img src="/images/icon-file-upload.svg" alt="" />
+          <img :src="require(`../assets/images/icon-file-upload.svg`)" alt="" />
           上傳檔案
         </div>
         <input
@@ -51,7 +65,10 @@
           @click="clickUpload()"
         />
         <div class="sidebar-btnGroup-item" onclick="uploadFolder.click()">
-          <img src="/images/icon-folder-upload.svg" alt="" />
+          <img
+            :src="require(`../assets/images/icon-folder-upload.svg`)"
+            alt=""
+          />
           上傳資料夾
         </div>
         <input
@@ -66,7 +83,7 @@
           data-toggle="modal"
           data-target="#addFolder-modal"
         >
-          <img src="/images/icon-folder-add.svg" alt="" />
+          <img :src="require(`../assets/images/icon-folder-add.svg`)" alt="" />
           新資料夾
         </div>
         <div
@@ -101,7 +118,11 @@
           </div>
         </div>
         <a href="#" class="sidebar-btnGroup-item">
-          <img src="/images/icon-folder-share.svg" alt="" />
+          <img
+            :src="require(`../assets/images/icon-folder-share.svg`)"
+            alt=""
+          />
+
           共享資料夾
         </a>
         <router-link
@@ -109,17 +130,17 @@
           class="sidebar-btnGroup-item"
           @click.stop="isShowStar = true"
         >
-          <img src="/images/icon-star.svg" alt="" />
+          <img :src="require(`../assets/images/icon-star.svg`)" alt="" />
           已標記星號
         </router-link>
         <router-link to="/trash" class="sidebar-btnGroup-item">
-          <img src="/images/icon-trash.svg" alt="" />
+          <img :src="require(`../assets/images/icon-trash.svg`)" alt="" />
           垃圾桶
         </router-link>
       </div>
       <div class="monster">
         <img
-          src="/images/Cloud-monster.svg"
+          :src="require(`../assets/images/Cloud-monster.svg`)"
           alt=""
           class="monster-bgImg"
           :class="{ 'monster-bgImg-active': isUploading || showStorage }"
@@ -212,6 +233,10 @@
             placeholder="搜尋您的檔案"
             class="navbar-search-input"
             v-model="search"
+            :style="{
+              'background-image':
+                `url(` + require(`../assets/images/icon-search.svg`) + `)`,
+            }"
           />
         </div>
       </div>
@@ -233,10 +258,14 @@
                   <div class="folder-btn" @click.stop="toggleStarFolder(item)">
                     <img
                       v-if="item.isStar"
-                      src="/images/icon-star-fill.svg"
+                      :src="require(`../assets/images/icon-star-fill.svg`)"
                       alt="標記星號"
                     />
-                    <img v-else src="/images/icon-star.svg" alt="標記星號" />
+                    <img
+                      v-else
+                      :src="require(`../assets/images/icon-star.svg`)"
+                      alt="標記星號"
+                    />
                   </div>
                   <div class="dropdown">
                     <div
@@ -247,7 +276,10 @@
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <img src="/images/icon-more.svg" alt="選單" />
+                      <img
+                        :src="require(`../assets/images/icon-more.svg`)"
+                        alt="選單"
+                      />
                     </div>
                     <div
                       class="dropdown-menu"
@@ -293,10 +325,14 @@
                   <div class="folder-btn" @click.stop="toggleStarFolder(item)">
                     <img
                       v-if="item.isStar"
-                      src="/images/icon-star-fill.svg"
+                      :src="require(`../assets/images/icon-star-fill.svg`)"
                       alt="標記星號"
                     />
-                    <img v-else src="/images/icon-star.svg" alt="標記星號" />
+                    <img
+                      v-else
+                      :src="require(`../assets/images/icon-star.svg`)"
+                      alt="標記星號"
+                    />
                   </div>
                   <div class="dropdown">
                     <div
@@ -307,7 +343,10 @@
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <img src="/images/icon-more.svg" alt="選單" />
+                      <img
+                        :src="require(`../assets/images/icon-more.svg`)"
+                        alt="選單"
+                      />
                     </div>
                     <div
                       class="dropdown-menu"
@@ -354,10 +393,14 @@
                   <div class="file-btn" @click.stop="toggleStarFile(item)">
                     <img
                       v-if="item.isStar"
-                      src="/images/icon-star-fill.svg"
+                      :src="require(`../assets/images/icon-star-fill.svg`)"
                       alt="標記星號"
                     />
-                    <img v-else src="/images/icon-star.svg" alt="標記星號" />
+                    <img
+                      v-else
+                      :src="require(`../assets/images/icon-star.svg`)"
+                      alt="標記星號"
+                    />
                   </div>
                   <div class="dropdown">
                     <div
@@ -368,7 +411,10 @@
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <img src="/images/icon-more.svg" alt="選單" />
+                      <img
+                        :src="require(`../assets/images/icon-more.svg`)"
+                        alt="選單"
+                      />
                     </div>
                     <div
                       class="dropdown-menu"
@@ -417,10 +463,14 @@
                   <div class="file-btn" @click.stop="toggleStarFile(item)">
                     <img
                       v-if="item.isStar"
-                      src="/images/icon-star-fill.svg"
+                      :src="require(`../assets/images/icon-star-fill.svg`)"
                       alt="標記星號"
                     />
-                    <img v-else src="/images/icon-star.svg" alt="標記星號" />
+                    <img
+                      v-else
+                      :src="require(`../assets/images/icon-star.svg`)"
+                      alt="標記星號"
+                    />
                   </div>
                   <div class="dropdown">
                     <div
@@ -431,7 +481,10 @@
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <img src="/images/icon-more.svg" alt="選單" />
+                      <img
+                        :src="require(`../assets/images/icon-more.svg`)"
+                        alt="選單"
+                      />
                     </div>
                     <div
                       class="dropdown-menu"

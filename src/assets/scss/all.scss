@@ -15,7 +15,6 @@
   flex-wrap: wrap;
 }
 .logo {
-  background-image: url(/images/logo.svg); /* shows image */
   width: 120px;
   height: 40px;
   margin: auto;
@@ -292,7 +291,6 @@
       height: 50px;
       box-sizing: border-box;
       border-radius: 25px;
-      background-image: url(/images/icon-search.svg);
       background-position: 5px;
       background-repeat: no-repeat;
       &:hover {
@@ -379,7 +377,6 @@
       font-size: 16px;
       line-height: 24px;
       color: #6b6d72;
-      background-image: url(/images/icon-search.svg);
       background-position: 12px 10px;
       background-repeat: no-repeat;
       @include breakpoint-sm {

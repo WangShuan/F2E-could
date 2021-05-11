@@ -35,10 +35,14 @@
               <div class="folder-btn" @click.stop="toggleStarFolder(item)">
                 <img
                   v-if="item.isStar"
-                  src="/images/icon-star-fill.svg"
+                  :src="require(`../assets/images/icon-star-fill.svg`)"
                   alt="標記星號"
                 />
-                <img v-else src="/images/icon-star.svg" alt="標記星號" />
+                <img
+                  v-else
+                  :src="require(`../assets/images/icon-star.svg`)"
+                  alt="標記星號"
+                />
               </div>
               <div class="dropdown">
                 <div
@@ -49,7 +53,10 @@
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  <img src="/images/icon-more.svg" alt="選單" />
+                  <img
+                    :src="require(`../assets/images/icon-more.svg`)"
+                    alt="選單"
+                  />
                 </div>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item" href="#">共享</a>
@@ -92,10 +99,14 @@
               <div class="folder-btn" @click.stop="toggleStarFolder(item)">
                 <img
                   v-if="item.isStar"
-                  src="/images/icon-star-fill.svg"
+                  :src="require(`../assets/images/icon-star-fill.svg`)"
                   alt="標記星號"
                 />
-                <img v-else src="/images/icon-star.svg" alt="標記星號" />
+                <img
+                  v-else
+                  :src="require(`../assets/images/icon-star.svg`)"
+                  alt="標記星號"
+                />
               </div>
               <div class="dropdown">
                 <div
@@ -106,7 +117,10 @@
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  <img src="/images/icon-more.svg" alt="選單" />
+                  <img
+                    :src="require(`../assets/images/icon-more.svg`)"
+                    alt="選單"
+                  />
                 </div>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item" href="#">共享</a>
@@ -150,10 +164,14 @@
               <div class="file-btn" @click.stop="toggleStarFile(item)">
                 <img
                   v-if="item.isStar"
-                  src="/images/icon-star-fill.svg"
+                  :src="require(`../assets/images/icon-star-fill.svg`)"
                   alt="標記星號"
                 />
-                <img v-else src="/images/icon-star.svg" alt="標記星號" />
+                <img
+                  v-else
+                  :src="require(`../assets/images/icon-star.svg`)"
+                  alt="標記星號"
+                />
               </div>
               <div class="dropdown">
                 <div
@@ -164,7 +182,10 @@
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  <img src="/images/icon-more.svg" alt="選單" />
+                  <img
+                    :src="require(`../assets/images/icon-more.svg`)"
+                    alt="選單"
+                  />
                 </div>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item" href="#">共享</a>
@@ -210,10 +231,14 @@
               <div class="file-btn" @click.stop="toggleStarFile(item)">
                 <img
                   v-if="item.isStar"
-                  src="/images/icon-star-fill.svg"
+                  :src="require(`../assets/images/icon-star-fill.svg`)"
                   alt="標記星號"
                 />
-                <img v-else src="/images/icon-star.svg" alt="標記星號" />
+                <img
+                  v-else
+                  :src="require(`../assets/images/icon-star.svg`)"
+                  alt="標記星號"
+                />
               </div>
               <div class="dropdown">
                 <div
@@ -224,7 +249,10 @@
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  <img src="/images/icon-more.svg" alt="選單" />
+                  <img
+                    :src="require(`../assets/images/icon-more.svg`)"
+                    alt="選單"
+                  />
                 </div>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item" href="#">共享</a>
