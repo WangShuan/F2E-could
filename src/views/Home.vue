@@ -117,12 +117,14 @@
             </div>
           </div>
         </div>
-        <a href="#" class="sidebar-btnGroup-item">
+        <a
+          href="javascript:alert('抱歉，該功能尚未開啟！')"
+          class="sidebar-btnGroup-item"
+        >
           <img
             :src="require(`../assets/images/icon-folder-share.svg`)"
             alt=""
           />
-
           共享資料夾
         </a>
         <router-link
@@ -307,7 +309,9 @@
                     </div>
                   </div>
                 </div>
-                {{ item.fakeName }}
+                <span class="text-truncate d-inline-block px-2 w-100">{{
+                  item.fakeName
+                }}</span>
               </div>
             </div>
           </div>
@@ -374,7 +378,9 @@
                     </div>
                   </div>
                 </div>
-                {{ item.fakeName }}
+                <span class="text-truncate d-inline-block px-2 w-100">{{
+                  item.fakeName
+                }}</span>
               </div>
             </div>
           </div>
@@ -445,7 +451,9 @@
                   </div>
                 </div>
                 <img :src="item.imgUrl" class="file-img" alt="" />
-                {{ item.fakeName }}
+                <span class="text-truncate d-inline-block px-2 w-100">{{
+                  item.fakeName
+                }}</span>
               </div>
             </div>
           </div>
@@ -515,7 +523,9 @@
                   </div>
                 </div>
                 <img :src="item.imgUrl" class="file-img" alt="" />
-                {{ item.fakeName }}
+                <span class="text-truncate d-inline-block px-2 w-100">{{
+                  item.fakeName
+                }}</span>
               </div>
             </div>
           </div>

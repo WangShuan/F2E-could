@@ -38,7 +38,9 @@
                 <img :src="require(`../assets/images/icon-trash.svg`)" alt="" />
               </div>
             </div>
-            {{ item.fakeName }}
+            <span class="text-truncate d-inline-block px-2 w-100">{{
+              item.fakeName
+            }}</span>
           </div>
         </div>
       </div>
@@ -59,7 +61,9 @@
                 <img :src="require(`../assets/images/icon-trash.svg`)" alt="" />
               </div>
             </div>
-            {{ item.fakeName }}
+            <span class="text-truncate d-inline-block px-2 w-100">{{
+              item.fakeName
+            }}</span>
           </div>
         </div>
       </div>
@@ -82,7 +86,9 @@
               </div>
             </div>
             <img :src="item.imgUrl" class="file-img" alt="" />
-            {{ item.fakeName }}
+            <span class="text-truncate d-inline-block px-2 w-100">{{
+              item.fakeName
+            }}</span>
           </div>
         </div>
       </div>
@@ -104,7 +110,9 @@
               </div>
             </div>
             <img :src="item.imgUrl" class="file-img" alt="" />
-            {{ item.fakeName }}
+            <span class="text-truncate d-inline-block px-2 w-100">{{
+              item.fakeName
+            }}</span>
           </div>
         </div>
       </div>
